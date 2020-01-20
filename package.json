@@ -1,7 +1,7 @@
 {
     "name": "ecui-snippet",
-    "displayName": "ecui-snippet",
-    "description": "ecui-snippet",
+    "displayName": "ecui相关扩展",
+    "description": "ecui相关扩展",
     "version": "0.0.1",
     "publisher": "ecuiwd",
     "engines": {
@@ -57,5 +57,10 @@
     },
     "dependencies": {
         "opn": "^5.3.0"
-    }
+    },
+    "repository": {
+		"type": "git",
+		"url": "https://github.com/wangditxz/ecui-vscode"
+	},
+	"homepage": "https://github.com/wangditxz/ecui-vscode/blob/master/README.md"
 }

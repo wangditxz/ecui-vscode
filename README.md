@@ -1,3 +1,9 @@
 # ecui-snippet README
 
-为了帮助用ecui框架开发的前端同学
+vscode中ecui相关扩展
+
+### api提示
+
+### etpl语法高亮
+
+### ecui文档相关
