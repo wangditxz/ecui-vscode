@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>YVAxisChart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript" src="../common/common.js"></script>
+<script language="javascript" src="../common/browdata.js"></script>
+<script language="javascript" src="../common/appliesto2.js"></script>
+<script language="javascript" src="../common/toolbar.js"></script>
+<script language="javascript" src="../common/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/prettify.css" />
+<style>
+BODY
+{
+font-family:verdana,arial,helvetica;
+padding:20px;
+}
+</style>
+</head>
+<body>
+<h1><a>YVAxisChart 控件</a></h1>
+<hr size="1">
+
+<p>继承自 <a href="../control/SVG.html">SVG</a></p>
+<p><b>文件路径：</b>.../Users/yiche/yiche/ECUI/src/svg/y-v-axis.js</p>
+
+
+<font color="red">构造方法中没有call()</font>
+
+<p class="clsRef">使用方法</p>
+<blockquote>
+	<p>&lt;!--&nbsp;以下***表示具体的展现类型&nbsp;--&gt;</br>&lt;div&nbsp;ui=&quot;type:YV***AxisChart&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;参见svg.js&nbsp;--&gt;</br>&lt;/div&gt;</br>&lt;script&gt;</br>var&nbsp;options&nbsp;=&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;xAxis:&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid:&nbsp;[1,&nbsp;1,&nbsp;2,&nbsp;2,&nbsp;1],</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line:&nbsp;false,</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;['',&nbsp;'二手车',&nbsp;'新车']</br>&nbsp;&nbsp;&nbsp;&nbsp;},</br>&nbsp;&nbsp;&nbsp;&nbsp;yAxis:&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid:&nbsp;[1,&nbsp;4,&nbsp;1],</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line:&nbsp;false,</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max:&nbsp;50,&nbsp;//&nbsp;坐标轴最大值</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min:&nbsp;-50,&nbsp;//&nbsp;坐标轴最小值</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formatter:&nbsp;'{0}%'&nbsp;//&nbsp;值显示的格式</br>&nbsp;&nbsp;&nbsp;&nbsp;},</br>&nbsp;&nbsp;&nbsp;&nbsp;series:&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ratio:&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;1&nbsp;/&nbsp;2,&nbsp;//&nbsp;宽度相对分类的总宽度比例</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text:&nbsp;1,&nbsp;//&nbsp;文本相对于当前选项高度的比例</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ellipse:&nbsp;1&nbsp;/&nbsp;3&nbsp;//&nbsp;椭圆的高宽比例，仅对YVCylinderAxis有效</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;[0,&nbsp;-20,&nbsp;50]&nbsp;//&nbsp;取值</br>&nbsp;&nbsp;&nbsp;&nbsp;}</br>};</br>YVCylinderAxisControl.render(options);</br>YVBarAxisControl.render(options);</br>&lt;/script&gt;</br>&lt;style&gt;</br>.axis-line&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;stroke:&nbsp;rgb(200,&nbsp;200,&nbsp;200);</br>}</br>.align-line&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;stroke:&nbsp;rgb(50,&nbsp;50,&nbsp;50);</br>}</br>.axis-text&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;fill:&nbsp;rgb(255,&nbsp;255,&nbsp;255);</br>&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateX(50px)&nbsp;translateY(-10px);</br>}</br>.category-text&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;fill:&nbsp;rgb(255,&nbsp;255,&nbsp;255);</br>&nbsp;&nbsp;&nbsp;&nbsp;text-anchor:&nbsp;middle;</br>}</br>.item-text&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;fill:&nbsp;rgb(255,&nbsp;255,&nbsp;255);</br>&nbsp;&nbsp;&nbsp;&nbsp;text-anchor:&nbsp;middle;</br>}</br>.cylinder&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;.category-text&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(30px);</br>&nbsp;&nbsp;&nbsp;&nbsp;}</br>&nbsp;&nbsp;&nbsp;&nbsp;.item-text&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(-17px);</br>&nbsp;&nbsp;&nbsp;&nbsp;}</br>&nbsp;&nbsp;&nbsp;&nbsp;.item1-body&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fill:&nbsp;rgba(38,&nbsp;127,&nbsp;232,&nbsp;0.6)</br>&nbsp;&nbsp;&nbsp;&nbsp;}</br>&nbsp;&nbsp;&nbsp;&nbsp;.item1-head&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fill:&nbsp;rgb(28,&nbsp;133,&nbsp;255)</br>&nbsp;&nbsp;&nbsp;&nbsp;}</br>&nbsp;&nbsp;&nbsp;&nbsp;.item1-foot&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fill:&nbsp;rgb(37,&nbsp;99,&nbsp;172)</br>&nbsp;&nbsp;&nbsp;&nbsp;}</br>&nbsp;&nbsp;&nbsp;&nbsp;.item2-body&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fill:&nbsp;rgba(32,&nbsp;225,&nbsp;247,&nbsp;0.6)</br>&nbsp;&nbsp;&nbsp;&nbsp;}</br>&nbsp;&nbsp;&nbsp;&nbsp;.item2-head&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fill:&nbsp;rgb(33,&nbsp;228,&nbsp;247)</br>&nbsp;&nbsp;&nbsp;&nbsp;}</br>&nbsp;&nbsp;&nbsp;&nbsp;.item2-foot&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fill:&nbsp;rgb(17,&nbsp;164,&nbsp;180)</br>&nbsp;&nbsp;&nbsp;&nbsp;}</br>}</br>.bar&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;.category-text&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(20px);</br>&nbsp;&nbsp;&nbsp;&nbsp;}</br>&nbsp;&nbsp;&nbsp;&nbsp;.item-text&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(-7px);</br>&nbsp;&nbsp;&nbsp;&nbsp;}</br>&nbsp;&nbsp;&nbsp;&nbsp;.item1&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fill:&nbsp;rgba(38,&nbsp;127,&nbsp;232,&nbsp;0.6)</br>&nbsp;&nbsp;&nbsp;&nbsp;}</br>&nbsp;&nbsp;&nbsp;&nbsp;.item2&nbsp;{</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fill:&nbsp;rgba(32,&nbsp;225,&nbsp;247,&nbsp;0.6)</br>&nbsp;&nbsp;&nbsp;&nbsp;}</br>}</br></p>
+</blockquote>
+
+
+
+<p class="clsRef">option支持的属性</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td>Y</td>
+    <td>轴为值，X轴为分类的分类图基类。</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">属性</p>
+<blockquote>
+	<table class="clsSTD">
+	</table>
+</blockquote>
+
+<p class="clsRef">方法</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td><a href="../method/YVAxisChart-render.html">render</a></td>
+    <td>绘制分类图。</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">事件</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">子类</p>
+<blockquote>
+  <table class="clsSTD">
+  <tr>
+    <td><a href="../control/YVBarAxisChart.html">YVBarAxisChart</a></td>
+    <td>方块分类图。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/YVCylinderAxisChart.html">YVCylinderAxisChart</a></td>
+    <td>圆柱分类图。</td>
+  </tr>
+  
+  </table>
+</blockquote>
+
+<div style="text-align:right"><a href="../controlTree.html">返回</a></div>
+<script>
+if (document.getElementById('htmlDemo')) {
+    document.getElementById('htmlDemo').innerHTML = encodeHTML(formatHTML(document.getElementById('htmlDemo').innerHTML)).toLowerCase();
+    prettyPrint();
+}
+</script>
+</body>
+</html>

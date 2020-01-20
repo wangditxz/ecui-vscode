@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<head>
+<title>setParent</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript" src="../common/common.js"></script>
+<script language="javascript" src="../common/browdata.js"></script>
+<script language="javascript" src="../common/appliesto2.js"></script>
+<script language="javascript" src="../common/toolbar.js"></script>
+<script language="javascript" src="../common/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/prettify.css" />
+<style>
+BODY
+{
+font-family:verdana,arial,helvetica;
+padding:20px;
+}
+</style>
+</head>
+<body>
+<h1><a>setParent 方法</a></h1>
+<hr size="1">
+
+<p>setParent&nbsp;方法设置父控件，将当前控件挂接到父控件对象的内层元素中。如果父控件发生变化，原有的父控件若存在，将触发移除子控件事件(onremove)，并解除控件与原有父控件的关联，新的父控件若存在，将触发添加子控件事件(onappend)，如果此事件返回&nbsp;false，添加失败，相当于忽略&nbsp;parent&nbsp;参数。</br></p>
+<p class="clsRef">setParent</p>
+<blockquote>
+	<p>属于 <a href="../control/Control.html">Control</a>控件</p>
+	
+	
+		<p>访问控制属性：public
+		</p>
+	
+</blockquote>
+
+
+
+<p class="clsRef">参数</p>
+<blockquote>
+	<table class="clsSTD">
+		<tr>
+			<td>parent</td>
+			<td></td>
+		</tr>
+	
+	</table>
+</blockquote>
+
+<div style="text-align:right"><a href="../control/Control.html">返回控件</a></div>
+<div style="text-align:right"><a href="../controlTree.html">返回控件树</a></div>
+<script>
+if (document.getElementById('htmlDemo')) {
+    document.getElementById('htmlDemo').innerHTML = encodeHTML(formatHTML(document.getElementById('htmlDemo').innerHTML)).toLowerCase();
+    prettyPrint();
+}
+</script>
+</body>
+</html>

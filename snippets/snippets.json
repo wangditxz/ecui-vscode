@@ -1,0 +1,32 @@
+{
+  "路由": {
+    "scope": "javascript",
+    "prefix": "ecrouter",
+    "body": [
+      "ecui.esr.addRoute('${1:routeName}', {",
+      "    model: [],",
+      "    view: '${1:routeView}View',",
+      "    weight: ${2:weight},",
+      "    CACHE: false,",
+      "    onbeforerequest: function(context) {},",
+      "    onbeforerender: function(context) {},",
+      "    onafterrender: function(context) {},",
+      "    onleave: function(context) {}",
+      "});"
+    ],
+    "description": "路由"
+  },
+  "继承": {
+    "scope": "javascript",
+    "prefix": "ecinherits",
+    "body": [
+      "ecui.inherits(",
+      "    ecui.ui.${1:Control},",
+      "    function(el, options) {",
+      "        ecui.ui.${1:Control}.call(this, el, options);",
+      "    },",
+      ");"
+    ],
+    "description": "继承"
+  }
+}

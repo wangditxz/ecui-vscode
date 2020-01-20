@@ -1,0 +1,396 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Table</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript" src="../common/common.js"></script>
+<script language="javascript" src="../common/browdata.js"></script>
+<script language="javascript" src="../common/appliesto2.js"></script>
+<script language="javascript" src="../common/toolbar.js"></script>
+<script language="javascript" src="../common/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/prettify.css" />
+<style>
+BODY
+{
+font-family:verdana,arial,helvetica;
+padding:20px;
+}
+</style>
+</head>
+<body>
+<h1><a>Table 控件</a></h1>
+<hr size="1">
+<p>表格控件。</p>
+<p>继承自 <a href="../control/Control.html">Control</a></p>
+<p><b>文件路径：</b>.../Users/yiche/yiche/ECUI/src/base/table.js</p>
+
+
+
+
+<p class="clsRef">使用方法</p>
+<blockquote>
+	<p>&lt;!--&nbsp;如果需要滚动条，请设置div的width/height以及table的width样式，其中table的width如果大于div的width将出现横向滚动条，如果table的高度大于div的height将出现纵向滚动条&nbsp;--&gt;</br>&lt;div&nbsp;ui=&quot;type:table&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;table&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;表头区域&nbsp;--&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;style=&quot;width:200px;&quot;&gt;公司名&lt;/th&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;style=&quot;width:200px;&quot;&gt;url&lt;/th&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;style=&quot;width:250px;&quot;&gt;地址&lt;/th&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;style=&quot;width:100px;&quot;&gt;创办时间&lt;/th&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;内容行区域&nbsp;--&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;百度&lt;/td&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;www.baidu.com&lt;/td&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;中国北京中关村&lt;/td&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;1999&lt;/td&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/table&gt;</br></p>
+</blockquote>
+
+<p class="clsRef">详情</p>
+<blockquote>
+	<p>对基本的&nbsp;TableElement&nbsp;功能进行了扩展，表头固定，不会随表格的垂直滚动条滚动而滚动，在行列滚动时，支持整行整列移动，允许直接对表格的数据进行增加/删除/修改操作。表格控件针对有滚动条的鼠标设备和无滚动条的触控设备进行了不同的处理。</br></p>
+</blockquote>
+
+<p class="clsRef">option支持的属性</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td>head</td>
+    <td>-float     表头允许飘浮，默认不允许</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">属性</p>
+<blockquote>
+	<table class="clsSTD">
+	<tr>
+		<td>_nHeadFloat</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_nHeadMargin</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_aRows</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_aHeadCells</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_eLayout</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_uHead</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_aHeadRows</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_UITable</td>
+		<td>
+		</td>
+	</tr>
+		
+	</table>
+</blockquote>
+
+<p class="clsRef">方法</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td><a href="../method/Table-$beforescroll.html">$beforescroll</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-$cache.html">$cache</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-$cellclick.html">$cellclick</a></td>
+    <td>单元格点击事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-$dispose.html">$dispose</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-$getElement.html">$getElement</a></td>
+    <td>获取单元格主元素。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-$headscroll.html">$headscroll</a></td>
+    <td>头部滚动处理。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-$initStructure.html">$initStructure</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-$mousewheel.html">$mousewheel</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-$restoreStructure.html">$restoreStructure</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-$rowclick.html">$rowclick</a></td>
+    <td>行点击事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-$scroll.html">$scroll</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-addColumn.html">addColumn</a></td>
+    <td>增加一列。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-addRow.html">addRow</a></td>
+    <td>增加一行。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-cache.html">cache</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-getCell.html">getCell</a></td>
+    <td>获取单元格控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-getColumnCount.html">getColumnCount</a></td>
+    <td>获取表格列的数量。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-getHCell.html">getHCell</a></td>
+    <td>获取表头单元格控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-getHCells.html">getHCells</a></td>
+    <td>获取全部的表头单元格控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-getHeadRows.html">getHeadRows</a></td>
+    <td>获取头部的行控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-getHRows.html">getHRows</a></td>
+    <td>获取全部的表头行控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-getLayout.html">getLayout</a></td>
+    <td>获取定位的&nbsp;DOM&nbsp;元素。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-getRow.html">getRow</a></td>
+    <td>获取行控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-getRowCount.html">getRowCount</a></td>
+    <td>获取表格行的数量。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-getRows.html">getRows</a></td>
+    <td>获取全部的行控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-removeAll.html">removeAll</a></td>
+    <td>移除全部的行。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-removeColumn.html">removeColumn</a></td>
+    <td>移除一列并释放占用的空间。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-removeRow.html">removeRow</a></td>
+    <td>移除一行并释放占用的空间。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Table-setHeadFloat.html">setHeadFloat</a></td>
+    <td>设置表头飘浮的位置。</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">事件</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">子类</p>
+<blockquote>
+  <table class="clsSTD">
+  <tr>
+    <td><a href="../control/LockedTable.html">LockedTable</a></td>
+    <td>锁定式表格控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/InlineTable.html">InlineTable</a></td>
+    <td>内联表格控件。</td>
+  </tr>
+  
+  </table>
+</blockquote>
+
+<div style="text-align:right"><a href="../controlTree.html">返回</a></div>
+<script>
+if (document.getElementById('htmlDemo')) {
+    document.getElementById('htmlDemo').innerHTML = encodeHTML(formatHTML(document.getElementById('htmlDemo').innerHTML)).toLowerCase();
+    prettyPrint();
+}
+</script>
+</body>
+</html>

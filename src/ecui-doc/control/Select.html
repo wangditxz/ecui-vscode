@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Select</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript" src="../common/common.js"></script>
+<script language="javascript" src="../common/browdata.js"></script>
+<script language="javascript" src="../common/appliesto2.js"></script>
+<script language="javascript" src="../common/toolbar.js"></script>
+<script language="javascript" src="../common/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/prettify.css" />
+<style>
+BODY
+{
+font-family:verdana,arial,helvetica;
+padding:20px;
+}
+</style>
+</head>
+<body>
+<h1><a>Select 控件</a></h1>
+<hr size="1">
+<p>下拉框控件。</p>
+<p>继承自 <a href="../control/$AbstractSelect.html">$AbstractSelect</a></p>
+<p><b>文件路径：</b>.../Users/yiche/yiche/ECUI/src/input/select.js</p>
+
+
+
+
+<p class="clsRef">使用方法</p>
+<blockquote>
+	<p>&lt;select&nbsp;ui=&quot;type:select;placeholder:请选择&quot;&nbsp;name=&quot;sex&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;value=&quot;male&quot;&nbsp;selected=&quot;selected&quot;&gt;男&lt;/option&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;value=&quot;female&quot;&gt;女&lt;/option&gt;</br>&lt;/select&gt;</br>或</br>&lt;div&nbsp;ui=&quot;type:select;name:sex;value:male;placeholder:请选择&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ui=&quot;value:male&quot;&gt;男&lt;/div&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ui=&quot;value:female&quot;&gt;女&lt;/div&gt;</br>&lt;/div&gt;</br>或</br>&lt;div&nbsp;ui=&quot;type:select&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;hidden&quot;&nbsp;name=&quot;sex&quot;&nbsp;value=&quot;male&quot;&nbsp;placeholder=&quot;请选择&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ui=&quot;value:male&quot;&gt;男&lt;/div&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ui=&quot;value:female&quot;&gt;女&lt;/div&gt;</br></p>
+</blockquote>
+
+<p class="clsRef">详情</p>
+<blockquote>
+	<p>扩展了原生&nbsp;SelectElement&nbsp;的功能，允许指定下拉选项框的最大选项数量，在屏幕显示不下的时候，会自动显示在下拉框的上方。在没有选项时，下拉选项框有一个选项的高度。下拉框控件允许使用键盘与滚轮操作，在下拉选项框打开时，可以通过回车键或鼠标点击选择，上下键选择选项的当前条目，在关闭下拉选项框后，只要拥有焦点，就可以通过滚轮上下选择选项。</br></p>
+</blockquote>
+
+<p class="clsRef">option支持的属性</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td>optionSize</td>
+    <td>下拉框最大允许显示的选项数量，默认为5</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>required</td>
+    <td>是否必须选择</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">属性</p>
+<blockquote>
+	<table class="clsSTD">
+	<tr>
+		<td>_nOptionSize</td>
+		<td>
+		</td>
+	</tr>
+		
+	</table>
+</blockquote>
+
+<p class="clsRef">方法</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td><a href="../method/Select-$initPopup.html">$initPopup</a></td>
+    <td>弹出层初始化。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Select-$keydown.html">$keydown</a></td>
+    <td>通过上下键与回车键操作下拉框。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Select-$keypress.html">$keypress</a></td>
+    <td>通过上下键与回车键操作下拉框。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Select-$keyup.html">$keyup</a></td>
+    <td>通过上下键与回车键操作下拉框。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Select-$mousewheel.html">$mousewheel</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Select-setOptionSize.html">setOptionSize</a></td>
+    <td>设置下拉框允许显示的选项数量。</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">事件</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">子类</p>
+<blockquote>
+  <table class="clsSTD">
+  <tr>
+    <td><a href="../control/Combox.html">Combox</a></td>
+    <td>组合框控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/MultilevelSelect-Select.html">MultilevelSelect.Select</a></td>
+    <td>下拉框部件。</td>
+  </tr>
+  
+  </table>
+</blockquote>
+
+<div style="text-align:right"><a href="../controlTree.html">返回</a></div>
+<script>
+if (document.getElementById('htmlDemo')) {
+    document.getElementById('htmlDemo').innerHTML = encodeHTML(formatHTML(document.getElementById('htmlDemo').innerHTML)).toLowerCase();
+    prettyPrint();
+}
+</script>
+</body>
+</html>

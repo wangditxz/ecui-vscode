@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>$AbstractSelect</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript" src="../common/common.js"></script>
+<script language="javascript" src="../common/browdata.js"></script>
+<script language="javascript" src="../common/appliesto2.js"></script>
+<script language="javascript" src="../common/toolbar.js"></script>
+<script language="javascript" src="../common/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/prettify.css" />
+<style>
+BODY
+{
+font-family:verdana,arial,helvetica;
+padding:20px;
+}
+</style>
+</head>
+<body>
+<h1><a>$AbstractSelect 控件</a></h1>
+<hr size="1">
+<p>下拉框控件虚基类。</p>
+<p>继承自 <a href="../control/InputControl.html">InputControl</a></p>
+<p><b>文件路径：</b>.../Users/yiche/yiche/ECUI/src/input/abstract-select.js</p>
+
+
+
+
+
+
+<p class="clsRef">详情</p>
+<blockquote>
+	<p>扩展了原生&nbsp;SelectElement&nbsp;的功能，允许指定下拉选项框的最大选项数量，在屏幕显示不下的时候，会自动显示在下拉框的上方。在没有选项时，下拉选项框有一个选项的高度。下拉框控件允许使用键盘与滚轮操作，在下拉选项框打开时，可以通过回车键或鼠标点击选择，上下键选择选项的当前条目，在关闭下拉选项框后，只要拥有焦点，就可以通过滚轮上下选择选项。</br></p>
+</blockquote>
+
+<p class="clsRef">option支持的属性</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td>optionSize</td>
+    <td>下拉框最大允许显示的选项数量，默认为5</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>placeholder</td>
+    <td>未选择时的提示信息</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>required</td>
+    <td>是否必须选择</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">属性</p>
+<blockquote>
+	<table class="clsSTD">
+	<tr>
+		<td>_uText</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_uOptions</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bRequired</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bAlterItems</td>
+		<td>
+		</td>
+	</tr>
+		
+	</table>
+</blockquote>
+
+<p class="clsRef">方法</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td><a href="../method/$AbstractSelect-$alterItems.html">$alterItems</a></td>
+    <td>选项控件发生变化的处理。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/$AbstractSelect-$change.html">$change</a></td>
+    <td>选项改变事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/$AbstractSelect-$initStructure.html">$initStructure</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/$AbstractSelect-$propertychange.html">$propertychange</a></td>
+    <td>属性改变事件的默认处理。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/$AbstractSelect-$reset.html">$reset</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/$AbstractSelect-$setPlaceholder.html">$setPlaceholder</a></td>
+    <td>设置placeholder信息。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/$AbstractSelect-$setValue.html">$setValue</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/$AbstractSelect-$validate.html">$validate</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/$AbstractSelect-cache.html">cache</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/$AbstractSelect-getText.html">getText</a></td>
+    <td>获取控件显示的文本。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/$AbstractSelect-init.html">init</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/$AbstractSelect-setText.html">setText</a></td>
+    <td>设置控件显示的文本。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/$AbstractSelect-setValue.html">setValue</a></td>
+    <td>设置控件的值。</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">事件</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">子类</p>
+<blockquote>
+  <table class="clsSTD">
+  <tr>
+    <td><a href="../control/MSelect.html">MSelect</a></td>
+    <td>下拉框控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Select.html">Select</a></td>
+    <td>下拉框控件。</td>
+  </tr>
+  
+  </table>
+</blockquote>
+
+<div style="text-align:right"><a href="../controlTree.html">返回</a></div>
+<script>
+if (document.getElementById('htmlDemo')) {
+    document.getElementById('htmlDemo').innerHTML = encodeHTML(formatHTML(document.getElementById('htmlDemo').innerHTML)).toLowerCase();
+    prettyPrint();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>InputControl</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript" src="../common/common.js"></script>
+<script language="javascript" src="../common/browdata.js"></script>
+<script language="javascript" src="../common/appliesto2.js"></script>
+<script language="javascript" src="../common/toolbar.js"></script>
+<script language="javascript" src="../common/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/prettify.css" />
+<style>
+BODY
+{
+font-family:verdana,arial,helvetica;
+padding:20px;
+}
+</style>
+</head>
+<body>
+<h1><a>InputControl 控件</a></h1>
+<hr size="1">
+<p>基础输入控件。</p>
+<p>继承自 <a href="../control/Control.html">Control</a></p>
+<p><b>文件路径：</b>.../Users/yiche/yiche/ECUI/src/input/input-control.js</p>
+
+
+
+
+<p class="clsRef">使用方法</p>
+<blockquote>
+	<p>&lt;input&nbsp;ui=&quot;type:input-control&quot;&nbsp;type=&quot;password&quot;&nbsp;name=&quot;passwd&quot;&nbsp;value=&quot;1111&quot;&nbsp;placeholder=&quot;请输入&quot;&gt;</br>或:</br>&lt;div&nbsp;ui=&quot;type:input-control;name:passwd;value:1111;inputType:password;placeholder:请输入&quot;&gt;&lt;/div&gt;</br>或:</br>&lt;div&nbsp;ui=&quot;type:input-control&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;password&quot;&nbsp;name=&quot;passwd&quot;&nbsp;value=&quot;1111&quot;&nbsp;placeholder=&quot;请输入&quot;&gt;</br>&lt;/div&gt;</br></br></p>
+</blockquote>
+
+<p class="clsRef">详情</p>
+<blockquote>
+	<p>实现了对原生&nbsp;InputElement&nbsp;的功能扩展，包括输入事件的实时响应(每次改变均触发事件)，以及&nbsp;IE&nbsp;下不能动态改变输入框的表单项名称的模拟处理。</br></p>
+</blockquote>
+
+<p class="clsRef">option支持的属性</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td>name</td>
+    <td>输入框的名称</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>value</td>
+    <td>输入框的默认值</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>checked</td>
+    <td>输入框是否默认选中(radio/checkbox有效)</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>inputType</td>
+    <td>输入框的类型，默认为 text</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>readOnly</td>
+    <td>输入框是否只读</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>valid</td>
+    <td>在什么情况下校验，表单提交时一定会校验，blur表示需要在失去焦点时校验</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">属性</p>
+<blockquote>
+	<table class="clsSTD">
+	<tr>
+		<td>_bIME</td>
+		<td>是否正在使用输入法;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bBlur</td>
+		<td>失去焦点时是否需要校验;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bError</td>
+		<td>是否出错;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_eInput</td>
+		<td>
+		</td>
+	</tr>
+		
+	</table>
+</blockquote>
+
+<p class="clsRef">方法</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td><a href="../method/InputControl-$bindEvent.html">$bindEvent</a></td>
+    <td>为控件的&nbsp;INPUT&nbsp;节点绑定事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-$blur.html">$blur</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-$clearErrorStyle.html">$clearErrorStyle</a></td>
+    <td>清除错误样式。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-$disable.html">$disable</a></td>
+    <td>控件失效，阻止输入框提交。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-$dispose.html">$dispose</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-$enable.html">$enable</a></td>
+    <td>控件解除失效，需要将输入框设置为可提交。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-$error.html">$error</a></td>
+    <td>控件格式校验错误的默认处理。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-$focus.html">$focus</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-$input.html">$input</a></td>
+    <td>内容改变事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-$ready.html">$ready</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-$reset.html">$reset</a></td>
+    <td>重置事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-$setParent.html">$setParent</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-$setValue.html">$setValue</a></td>
+    <td>设置控件的值。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-$submit.html">$submit</a></td>
+    <td>输入提交事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-$validate.html">$validate</a></td>
+    <td>输入格式校验事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-getFormName.html">getFormName</a></td>
+    <td>获取控件进行提交的名称，默认使用&nbsp;getName&nbsp;的返回值。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-getFormValue.html">getFormValue</a></td>
+    <td>获取控件进行提交的值，默认使用&nbsp;getValue&nbsp;的返回值。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-getInput.html">getInput</a></td>
+    <td>获取控件的输入元素。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-getName.html">getName</a></td>
+    <td>获取控件的名称。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-getValue.html">getValue</a></td>
+    <td>获取控件的值。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-saveToDefault.html">saveToDefault</a></td>
+    <td>保存控件的值为默认值，供form表单的reset方法使用。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-setName.html">setName</a></td>
+    <td>设置控件的名称。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/InputControl-setValue.html">setValue</a></td>
+    <td>设置控件的值。</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">事件</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">子类</p>
+<blockquote>
+  <table class="clsSTD">
+  <tr>
+    <td><a href="../control/BTreeCombox.html">BTreeCombox</a></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/BMultiSelect.html">BMultiSelect</a></td>
+    <td>多选下拉控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/CoupleSlider.html">CoupleSlider</a></td>
+    <td>组合滑块控件，用于选择一个区间。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/$AbstractSelect.html">$AbstractSelect</a></td>
+    <td>下拉框控件虚基类。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/MultiSelect.html">MultiSelect</a></td>
+    <td>多选下拉框控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/MMultiOptions.html">MMultiOptions</a></td>
+    <td>多选项输入框控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Radio.html">Radio</a></td>
+    <td>单选框控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Text.html">Text</a></td>
+    <td>文本输入框控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Checkbox.html">Checkbox</a></td>
+    <td>复选框控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/MultilevelSelect.html">MultilevelSelect</a></td>
+    <td>多级联动下拉框控件。</td>
+  </tr>
+  
+  </table>
+</blockquote>
+
+<div style="text-align:right"><a href="../controlTree.html">返回</a></div>
+<script>
+if (document.getElementById('htmlDemo')) {
+    document.getElementById('htmlDemo').innerHTML = encodeHTML(formatHTML(document.getElementById('htmlDemo').innerHTML)).toLowerCase();
+    prettyPrint();
+}
+</script>
+</body>
+</html>

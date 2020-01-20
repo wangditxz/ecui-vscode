@@ -1,0 +1,390 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>MListView</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript" src="../common/common.js"></script>
+<script language="javascript" src="../common/browdata.js"></script>
+<script language="javascript" src="../common/appliesto2.js"></script>
+<script language="javascript" src="../common/toolbar.js"></script>
+<script language="javascript" src="../common/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/prettify.css" />
+<style>
+BODY
+{
+font-family:verdana,arial,helvetica;
+padding:20px;
+}
+</style>
+</head>
+<body>
+<h1><a>MListView 控件</a></h1>
+<hr size="1">
+<p>移动端列表展示控件。</p>
+<p>继承自 <a href="../control/Control.html">Control</a></p>
+<p><b>文件路径：</b>.../Users/yiche/yiche/ECUI/src/mobile/m-list-view.js</p>
+
+
+
+
+<p class="clsRef">使用方法</p>
+<blockquote>
+	<p>&lt;ul&nbsp;ui=&quot;type:m-list-view&quot;&gt;</br>&nbsp;&nbsp;&lt;li&gt;单条数据内容&lt;/li&gt;</br>&nbsp;&nbsp;&lt;li&gt;单条数据内容&lt;/li&gt;</br>&lt;/ul&gt;</br></br></p>
+</blockquote>
+
+
+
+<p class="clsRef">option支持的属性</p>
+<blockquote>
+  <table class="clsSTD">
+  </table>
+</blockquote>
+
+<p class="clsRef">属性</p>
+<blockquote>
+	<table class="clsSTD">
+	<tr>
+		<td>_eHeader</td>
+		<td>顶部 DOM 元素;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_eFooter</td>
+		<td>底部 DOM 元素;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_sStatus</td>
+		<td>控件当前状态;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_nTopHidden</td>
+		<td>上部隐藏区域高度;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_nBottomHidden</td>
+		<td>下部隐藏区域高度;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_nTopIndex</td>
+		<td>上部隐藏的选项序号;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_eTitle</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_eEmpty</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_oHandle</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_nBottomIndex</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bLoading</td>
+		<td>
+		</td>
+	</tr>
+		
+	</table>
+</blockquote>
+
+<p class="clsRef">方法</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td><a href="../method/MListView-$cache.html">$cache</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-$dispose.html">$dispose</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-$draginertia.html">$draginertia</a></td>
+    <td>拖拽的惯性时间计算。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-$footercomplete.html">$footercomplete</a></td>
+    <td>拖拽到最底部事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-$footerenter.html">$footerenter</a></td>
+    <td>拖拽到达底部区域事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-$footerleave.html">$footerleave</a></td>
+    <td>拖拽离开底部区域事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-$headercomplete.html">$headercomplete</a></td>
+    <td>拖拽到最顶部事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-$headerenter.html">$headerenter</a></td>
+    <td>拖拽到达顶部区域事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-$headerleave.html">$headerleave</a></td>
+    <td>拖拽离开顶部区域事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-$initStructure.html">$initStructure</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-$loaddata.html">$loaddata</a></td>
+    <td>列表数据加载的默认处理。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-$ready.html">$ready</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-$refresh.html">$refresh</a></td>
+    <td>列表刷新的默认处理。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-getEmptyBody.html">getEmptyBody</a></td>
+    <td>获取空listview元素。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-getFooter.html">getFooter</a></td>
+    <td>获取底部元素。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-getHeader.html">getHeader</a></td>
+    <td>获取顶部元素。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-getStatus.html">getStatus</a></td>
+    <td>获取当前状态。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-reload.html">reload</a></td>
+    <td>重新加载数据。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-reset.html">reset</a></td>
+    <td>复位。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-$activate.html">$activate</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-$dragend.html">$dragend</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-$dragstart.html">$dragstart</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-add.html">add</a></td>
+    <td>本控件新增选项只能从顶部或底部。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-getY.html">getY</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-isLoading.html">isLoading</a></td>
+    <td>是否正在加载数据。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-remove.html">remove</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MListView-setPosition.html">setPosition</a></td>
+    <td></td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">事件</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">子类</p>
+<blockquote>
+  <table class="clsSTD">
+  <tr>
+    <td><a href="../control/MOpListView.html">MOpListView</a></td>
+    <td>移动端可操作列表展示控件。</td>
+  </tr>
+  
+  </table>
+</blockquote>
+
+<div style="text-align:right"><a href="../controlTree.html">返回</a></div>
+<script>
+if (document.getElementById('htmlDemo')) {
+    document.getElementById('htmlDemo').innerHTML = encodeHTML(formatHTML(document.getElementById('htmlDemo').innerHTML)).toLowerCase();
+    prettyPrint();
+}
+</script>
+</body>
+</html>

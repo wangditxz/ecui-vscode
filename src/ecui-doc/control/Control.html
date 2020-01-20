@@ -1,0 +1,1301 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Control</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript" src="../common/common.js"></script>
+<script language="javascript" src="../common/browdata.js"></script>
+<script language="javascript" src="../common/appliesto2.js"></script>
+<script language="javascript" src="../common/toolbar.js"></script>
+<script language="javascript" src="../common/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/prettify.css" />
+<style>
+BODY
+{
+font-family:verdana,arial,helvetica;
+padding:20px;
+}
+</style>
+</head>
+<body>
+<h1><a>Control 控件</a></h1>
+<hr size="1">
+<p>基础控件。</p>
+
+<p><b>文件路径：</b>.../Users/yiche/yiche/ECUI/src/control.js</p>
+
+
+
+
+<p class="clsRef">使用方法</p>
+<blockquote>
+	<p>&lt;div&nbsp;ui=&quot;type:control&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;这里放控件包含的内容&nbsp;--&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;...</br></p>
+</blockquote>
+
+<p class="clsRef">详情</p>
+<blockquote>
+	<p>基础控件&nbsp;与&nbsp;ECUI状态与事件控制器&nbsp;共同构成&nbsp;ECUI核心。基础控件扩展了原生&nbsp;DOM&nbsp;节点的标准事件，提供对控件基础属性的操作，是所有控件实现的基础。</br></p>
+</blockquote>
+
+<p class="clsRef">option支持的属性</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td>id</td>
+    <td>名称，指定后可以使用 ecui.get([]) 的方式获取控件</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>uid</td>
+    <td>唯一标识符，不可自行定义，系统自动生成</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>primary</td>
+    <td>主元素需要绑定的样式</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>capturable</td>
+    <td>是否接收交互事件，如果设置不接收交互事件，交互事件由控件的父控件处理，缺省值为 true</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>disabled</td>
+    <td>是否失效，如果设置失效，控件忽略所有事件，缺省值为 false</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>focusable</td>
+    <td>是否允许获取焦点，如果设置不允许获取焦点，控件的交互事件不会改变当前拥有焦点的控件，用于自定义滚动条，缺省值为 true</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>userSelect</td>
+    <td>是否允许选中内容，缺省值为 true</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">属性</p>
+<blockquote>
+	<table class="clsSTD">
+	<tr>
+		<td>_eMain</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_eBody</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_sUID</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_sClass</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bDisabled</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bCapturable</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bUserSelect</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bFocusable</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bGesture</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_sSubType</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_aStatus</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_sWidth</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_sHeight</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_UIControl</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bReady</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_cParent</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bCached</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bCreated</td>
+		<td>
+		</td>
+	</tr>
+		
+	</table>
+</blockquote>
+
+<p class="clsRef">方法</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td><a href="../method/Control-$activate.html">$activate</a></td>
+    <td>激活事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$append.html">$append</a></td>
+    <td>添加子控件事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$beforescroll.html">$beforescroll</a></td>
+    <td>滚动前事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$blur.html">$blur</a></td>
+    <td>失去焦点事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$cache.html">$cache</a></td>
+    <td>缓存控件的属性。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$click.html">$click</a></td>
+    <td>点击事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$dblclick.html">$dblclick</a></td>
+    <td>双击事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$deactivate.html">$deactivate</a></td>
+    <td>失去激活事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$disable.html">$disable</a></td>
+    <td>失效事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$dispose.html">$dispose</a></td>
+    <td>销毁事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$dragend.html">$dragend</a></td>
+    <td>拖拽结束事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$dragmove.html">$dragmove</a></td>
+    <td>拖拽事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$dragstart.html">$dragstart</a></td>
+    <td>拖拽开始事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$enable.html">$enable</a></td>
+    <td>启用事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$focus.html">$focus</a></td>
+    <td>获得焦点事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$forcedown.html">$forcedown</a></td>
+    <td>3D&nbsp;Touch&nbsp;用力按下事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$forceup.html">$forceup</a></td>
+    <td>3D&nbsp;Touch&nbsp;释放弹起事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$getBasicHeight.html">$getBasicHeight</a></td>
+    <td>获取控件的基本高度。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$getBasicWidth.html">$getBasicWidth</a></td>
+    <td>获取控件的基本宽度。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$getSection.html">$getSection</a></td>
+    <td>获取指定的部件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$hide.html">$hide</a></td>
+    <td>隐藏事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$initStructure.html">$initStructure</a></td>
+    <td>初始化控件的结构。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$keydown.html">$keydown</a></td>
+    <td>键盘键按下事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$keypress.html">$keypress</a></td>
+    <td>键盘键持续按压事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$keyup.html">$keyup</a></td>
+    <td>键盘键弹起事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$mousedown.html">$mousedown</a></td>
+    <td>鼠标键按下事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$mousemove.html">$mousemove</a></td>
+    <td>鼠标移动事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$mouseout.html">$mouseout</a></td>
+    <td>鼠标移出事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$mouseover.html">$mouseover</a></td>
+    <td>鼠标移入事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$mouseup.html">$mouseup</a></td>
+    <td>鼠标键弹起事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$mousewheel.html">$mousewheel</a></td>
+    <td>鼠标滚轮事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$ready.html">$ready</a></td>
+    <td>初始化完成事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$remove.html">$remove</a></td>
+    <td>移除子控件事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$restoreStructure.html">$restoreStructure</a></td>
+    <td>控件结构恢复。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$scroll.html">$scroll</a></td>
+    <td>滚动事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$setBody.html">$setBody</a></td>
+    <td>设置控件的内层元素。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$setParent.html">$setParent</a></td>
+    <td>直接设置父控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$setSize.html">$setSize</a></td>
+    <td>设置控件的大小。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-$show.html">$show</a></td>
+    <td>显示控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-alterStatus.html">alterStatus</a></td>
+    <td>为控件添加/移除一个状态样式。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-alterSubType.html">alterSubType</a></td>
+    <td>改变控件的子类型。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-appendTo.html">appendTo</a></td>
+    <td>将控件添加到页面元素中。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-blur.html">blur</a></td>
+    <td>控件失去焦点状态。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-cache.html">cache</a></td>
+    <td>缓存控件的属性。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-center.html">center</a></td>
+    <td>控件居中显示。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-clearCache.html">clearCache</a></td>
+    <td>清除控件的缓存。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-clearStatus.html">clearStatus</a></td>
+    <td>清除所有的状态样式。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-contain.html">contain</a></td>
+    <td>判断是否包含指定的控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-disable.html">disable</a></td>
+    <td>控件获得失效状态。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-dispose.html">dispose</a></td>
+    <td>销毁控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-enable.html">enable</a></td>
+    <td>控件解除失效状态。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-findControl.html">findControl</a></td>
+    <td>找到指定类型的祖先控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-focus.html">focus</a></td>
+    <td>控件获得焦点状态。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getBody.html">getBody</a></td>
+    <td>获取控件的内层元素。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getClass.html">getClass</a></td>
+    <td>获取控件的当前样式。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getClasses.html">getClasses</a></td>
+    <td>获取控件的全部样式。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getClientHeight.html">getClientHeight</a></td>
+    <td>获取控件内层可使用区域的高度。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getClientWidth.html">getClientWidth</a></td>
+    <td>获取控件内层可使用区域的宽度。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getContent.html">getContent</a></td>
+    <td>获取控件的内容。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getHeight.html">getHeight</a></td>
+    <td>获取控件区域的高度。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getMain.html">getMain</a></td>
+    <td>获取控件的主元素。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getMinimumHeight.html">getMinimumHeight</a></td>
+    <td>获取控件的最小高度。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getMinimumWidth.html">getMinimumWidth</a></td>
+    <td>获取控件的最小宽度。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getParent.html">getParent</a></td>
+    <td>获取父控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getPositionElement.html">getPositionElement</a></td>
+    <td>获取控件用于设置&nbsp;Position&nbsp;的&nbsp;DOM&nbsp;元素。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getType.html">getType</a></td>
+    <td>获取控件的类型。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getUID.html">getUID</a></td>
+    <td>获取控件的内部唯一标识符。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getUnitClass.html">getUnitClass</a></td>
+    <td>获取部件的样式。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getWidth.html">getWidth</a></td>
+    <td>获取控件区域的宽度。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getX.html">getX</a></td>
+    <td>获取控件的相对X轴坐标。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-getY.html">getY</a></td>
+    <td>获取控件的相对Y轴坐标。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-hide.html">hide</a></td>
+    <td>隐藏控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-init.html">init</a></td>
+    <td>控件初始化。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-initStructure.html">initStructure</a></td>
+    <td>初始化控件的结构。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-isActived.html">isActived</a></td>
+    <td>判断控件是否处于激活状态。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-isCached.html">isCached</a></td>
+    <td>判断是否已经缓存。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-isCapturable.html">isCapturable</a></td>
+    <td>判断是否响应浏览器事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-isCreated.html">isCreated</a></td>
+    <td>判断控件是否生成。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-isDisabled.html">isDisabled</a></td>
+    <td>判断控件是否处于失效状态。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-isFocusable.html">isFocusable</a></td>
+    <td>判断是否允许获得焦点。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-isFocused.html">isFocused</a></td>
+    <td>判断控件是否处于焦点状态。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-isGestureStatus.html">isGestureStatus</a></td>
+    <td>判断控件是否允许手势操作。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-isHovered.html">isHovered</a></td>
+    <td>判断控件是否处于悬停状态。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-isReady.html">isReady</a></td>
+    <td>判断控件是否完全生成。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-isShow.html">isShow</a></td>
+    <td>判断是否处于显示状态。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-isUserSelect.html">isUserSelect</a></td>
+    <td>判断是否允许选中内容。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-repaint.html">repaint</a></td>
+    <td>控件刷新。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-setClientSize.html">setClientSize</a></td>
+    <td>设置控件可使用区域的大小。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-setClass.html">setClass</a></td>
+    <td>设置控件的当前样式。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-setContent.html">setContent</a></td>
+    <td>设置控件的内容。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-setGestureStatus.html">setGestureStatus</a></td>
+    <td>设置当前控件是否允许手势操作。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-setParent.html">setParent</a></td>
+    <td>设置当前控件的父控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-setPosition.html">setPosition</a></td>
+    <td>设置控件的坐标。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-setSize.html">setSize</a></td>
+    <td>设置控件的大小。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Control-show.html">show</a></td>
+    <td>显示控件。</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">事件</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">子类</p>
+<blockquote>
+  <table class="clsSTD">
+  <tr>
+    <td><a href="../control/Clock.html">Clock</a></td>
+    <td>时钟控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Image.html">Image</a></td>
+    <td>图片控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Item.html">Item</a></td>
+    <td>选项控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Button.html">Button</a></td>
+    <td>按钮控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/InputControl.html">InputControl</a></td>
+    <td>基础输入控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/CoupleSlider-Slider.html">CoupleSlider.Slider</a></td>
+    <td>滑动部件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/BIMonth.html">BIMonth</a></td>
+    <td>年月视图控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/MMultiOptions-Options.html">MMultiOptions.Options</a></td>
+    <td>选项框部件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/MMultiOptions-Popup.html">MMultiOptions.Popup</a></td>
+    <td>弹出层部件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/MPhotoHotspot.html">MPhotoHotspot</a></td>
+    <td>热点图控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/SVG.html">SVG</a></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Upload.html">Upload</a></td>
+    <td>文件上传控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/MPanel.html">MPanel</a></td>
+    <td>移动端容器控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/FormInput.html">FormInput</a></td>
+    <td>表单项控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/BIMonth-Month.html">BIMonth.Month</a></td>
+    <td>日期部件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/MMultilevelSelect.html">MMultilevelSelect</a></td>
+    <td>移动端多级联动选择控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/BTreeSelectItem.html">BTreeSelectItem</a></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Listbox.html">Listbox</a></td>
+    <td>多选框控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/BPagination.html">BPagination</a></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/$AbstractSelect-Options.html">$AbstractSelect.Options</a></td>
+    <td>选项框部件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Progress.html">Progress</a></td>
+    <td>进度控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Table.html">Table</a></td>
+    <td>表格控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Layer.html">Layer</a></td>
+    <td>窗体控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Tab.html">Tab</a></td>
+    <td>选项卡控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/MListView.html">MListView</a></td>
+    <td>移动端列表展示控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Dialog-Title.html">Dialog.Title</a></td>
+    <td>标题栏部件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/BIQuarter.html">BIQuarter</a></td>
+    <td>年季度视图控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/BIQuarter-Quarter.html">BIQuarter.Quarter</a></td>
+    <td>日期部件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Label.html">Label</a></td>
+    <td>标签控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/MonthView-Cell.html">MonthView.Cell</a></td>
+    <td>日期部件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Table-Cell.html">Table.Cell</a></td>
+    <td>单元格部件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Table-Row.html">Table.Row</a></td>
+    <td>行部件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/PopupMenu.html">PopupMenu</a></td>
+    <td>菜单控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/BImgFill.html">BImgFill</a></td>
+    <td>图片填充控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/esr-AppLayer.html">esr.AppLayer</a></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/InputGroup.html">InputGroup</a></td>
+    <td>表单元素组，用于验证失败时的错误处理。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/MonthView.html">MonthView</a></td>
+    <td>月视图控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/CalendarInput-Clear.html">CalendarInput.Clear</a></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/MOpText-Button.html">MOpText.Button</a></td>
+    <td>操作按钮部件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Table-HCell.html">Table.HCell</a></td>
+    <td>列部件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/Timer.html">Timer</a></td>
+    <td>计时器控件。</td>
+  </tr>
+  
+  <tr>
+    <td><a href="../control/TreeView.html">TreeView</a></td>
+    <td>树控件。</td>
+  </tr>
+  
+  </table>
+</blockquote>
+
+<div style="text-align:right"><a href="../controlTree.html">返回</a></div>
+<script>
+if (document.getElementById('htmlDemo')) {
+    document.getElementById('htmlDemo').innerHTML = encodeHTML(formatHTML(document.getElementById('htmlDemo').innerHTML)).toLowerCase();
+    prettyPrint();
+}
+</script>
+</body>
+</html>

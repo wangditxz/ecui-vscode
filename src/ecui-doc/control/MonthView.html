@@ -1,0 +1,333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>MonthView</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript" src="../common/common.js"></script>
+<script language="javascript" src="../common/browdata.js"></script>
+<script language="javascript" src="../common/appliesto2.js"></script>
+<script language="javascript" src="../common/toolbar.js"></script>
+<script language="javascript" src="../common/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/prettify.css" />
+<style>
+BODY
+{
+font-family:verdana,arial,helvetica;
+padding:20px;
+}
+</style>
+</head>
+<body>
+<h1><a>MonthView 控件</a></h1>
+<hr size="1">
+<p>月视图控件。</p>
+<p>继承自 <a href="../control/Control.html">Control</a></p>
+<p><b>文件路径：</b>.../Users/yiche/yiche/ECUI/src/base/month-view.js</p>
+
+
+
+
+
+
+<p class="clsRef">详情</p>
+<blockquote>
+	<p>提供指定月份的日历信息。</br></p>
+</blockquote>
+
+<p class="clsRef">option支持的属性</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td>begin</td>
+    <td>开始日期，小于这个日期的日历单元格会被disabled</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>end</td>
+    <td>结束日期，大于这个日期的日历单元格会被disabled</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>date</td>
+    <td>初始选中的日期，默认是今日</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>extra</td>
+    <td>扩展的日期是否响应事件，默认为enable，如果需要响应事件设置成disable</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>weekday</td>
+    <td>从周几开始进行控制，默认是周日(0)</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>offset</td>
+    <td>每月的开始时间，默认是1,如果从上个月延续，取负值，如-26表示这个月的开始是上个月的26号</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">属性</p>
+<blockquote>
+	<table class="clsSTD">
+	<tr>
+		<td>_bExtra</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_oBegin</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_oEnd</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_nOffset</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_nWeekday</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_oDate</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_aCells</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_oFirst</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_oLast</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_nMonth</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_nYear</td>
+		<td>
+		</td>
+	</tr>
+		
+	</table>
+</blockquote>
+
+<p class="clsRef">方法</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td><a href="../method/MonthView-$change.html">$change</a></td>
+    <td>日期选择改变事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MonthView-$dateclick.html">$dateclick</a></td>
+    <td>日期点击事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MonthView-$initView.html">$initView</a></td>
+    <td>初始化视图区域(子类可以多次初始化)。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MonthView-$ready.html">$ready</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MonthView-getBegin.html">getBegin</a></td>
+    <td>获取有效日期区间的开始。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MonthView-getDays.html">getDays</a></td>
+    <td>获取全部的日期对象。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MonthView-getDate.html">getDate</a></td>
+    <td>获取当前选择的日期。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MonthView-getEnd.html">getEnd</a></td>
+    <td>获取有效日期区间的结束。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MonthView-getFirstDay.html">getFirstDay</a></td>
+    <td>获取日历控件当前月的第一天。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MonthView-getLastDay.html">getLastDay</a></td>
+    <td>获取日历控件当前月的最后一天。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MonthView-getMonth.html">getMonth</a></td>
+    <td>获取日历控件当前显示的月份。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MonthView-getYear.html">getYear</a></td>
+    <td>获取日历控件当前显示的年份。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MonthView-move.html">move</a></td>
+    <td>日历显示移动指定的月份数。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MonthView-setDate.html">setDate</a></td>
+    <td>设置当前选择的日期，并切换到对应的月份。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MonthView-setRange.html">setRange</a></td>
+    <td>设置日历控件的有效日期范围。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MonthView-setView.html">setView</a></td>
+    <td>设置日历控件当前显示的月份。</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">事件</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">子类</p>
+<blockquote>
+  <table class="clsSTD">
+  <tr>
+    <td><a href="../control/Calendar.html">Calendar</a></td>
+    <td>日历控件。</td>
+  </tr>
+  
+  </table>
+</blockquote>
+
+<div style="text-align:right"><a href="../controlTree.html">返回</a></div>
+<script>
+if (document.getElementById('htmlDemo')) {
+    document.getElementById('htmlDemo').innerHTML = encodeHTML(formatHTML(document.getElementById('htmlDemo').innerHTML)).toLowerCase();
+    prettyPrint();
+}
+</script>
+</body>
+</html>

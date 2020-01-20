@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>TreeView</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript" src="../common/common.js"></script>
+<script language="javascript" src="../common/browdata.js"></script>
+<script language="javascript" src="../common/appliesto2.js"></script>
+<script language="javascript" src="../common/toolbar.js"></script>
+<script language="javascript" src="../common/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/prettify.css" />
+<style>
+BODY
+{
+font-family:verdana,arial,helvetica;
+padding:20px;
+}
+</style>
+</head>
+<body>
+<h1><a>TreeView 控件</a></h1>
+<hr size="1">
+<p>树控件。</p>
+<p>继承自 <a href="../control/Control.html">Control</a></p>
+<p><b>文件路径：</b>.../Users/yiche/yiche/ECUI/src/base/tree-view.js</p>
+
+
+
+
+<p class="clsRef">使用方法</p>
+<blockquote>
+	<p>&lt;ul&nbsp;ui=&quot;type:tree-view;collapsed:false&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;根节点&lt;/li&gt;</br></br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;子节点一&lt;/li&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;子节点二&lt;/li&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;ui-hide&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;子节点三&lt;/li&gt;</br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;孙节点一&lt;/li&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;孙节点二&lt;/li&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;孙节点三&lt;/li&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;</br></p>
+</blockquote>
+
+<p class="clsRef">详情</p>
+<blockquote>
+	<p>包含普通子控件或者子树视图控件，普通子控件显示在它的文本区域，如果是子树视图控件，将在专门的子树视图控件区域显示。子树视图控件区域可以被收缩隐藏或是展开显示，默认情况下点击树视图控件就改变子树视图控件区域的状态。</br></p>
+</blockquote>
+
+<p class="clsRef">option支持的属性</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td>collapsed</td>
+    <td>子树区域是否收缩，默认为展开</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">属性</p>
+<blockquote>
+	<table class="clsSTD">
+	<tr>
+		<td>_bCollapsed</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_eContainer</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_aChildren</td>
+		<td>
+		</td>
+	</tr>
+		
+	</table>
+</blockquote>
+
+<p class="clsRef">方法</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td><a href="../method/TreeView-$click.html">$click</a></td>
+    <td>控件点击时改变子树视图控件的显示/隐藏状态。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-$collapse.html">$collapse</a></td>
+    <td>收缩当前树视图控件的子树区域的默认处理。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-$dispose.html">$dispose</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-$expand.html">$expand</a></td>
+    <td>展开当前树视图控件的子树区域的默认处理。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-$hide.html">$hide</a></td>
+    <td>隐藏树视图控件的同时需要将子树区域也隐藏。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-$mouseout.html">$mouseout</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-$mouseover.html">$mouseover</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-$nodeclick.html">$nodeclick</a></td>
+    <td>节点点击事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-$nodeout.html">$nodeout</a></td>
+    <td>节点移出事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-$nodeover.html">$nodeover</a></td>
+    <td>节点移入事件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-$setParent.html">$setParent</a></td>
+    <td>树视图控件改变位置时，需要将自己的子树区域显示在主元素之后。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-$show.html">$show</a></td>
+    <td>显示树视图控件的同时需要将子树视图区域也显示。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-add.html">add</a></td>
+    <td>添加子树视图控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-collapse.html">collapse</a></td>
+    <td>收缩当前树视图控件的子树区域。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-expand.html">expand</a></td>
+    <td>展开当前树视图控件的子树区域。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-forEach.html">forEach</a></td>
+    <td>遍历所有的树控件节点。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-getChild.html">getChild</a></td>
+    <td>获取当前树视图控件的指定子树视图控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-getChildren.html">getChildren</a></td>
+    <td>获取当前树视图控件的所有子树视图控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-getRoot.html">getRoot</a></td>
+    <td>获取当前树视图控件的根控件。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-isCollapsed.html">isCollapsed</a></td>
+    <td>当前子树区域是否收缩。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/TreeView-remove.html">remove</a></td>
+    <td>获取当前树视图控件的所有子树视图控件。</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">事件</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">子类</p>
+<blockquote>
+  <table class="clsSTD">
+  <tr>
+    <td><a href="../control/CheckboxTree.html">CheckboxTree</a></td>
+    <td>复选框树控件。</td>
+  </tr>
+  
+  </table>
+</blockquote>
+
+<div style="text-align:right"><a href="../controlTree.html">返回</a></div>
+<script>
+if (document.getElementById('htmlDemo')) {
+    document.getElementById('htmlDemo').innerHTML = encodeHTML(formatHTML(document.getElementById('htmlDemo').innerHTML)).toLowerCase();
+    prettyPrint();
+}
+</script>
+</body>
+</html>

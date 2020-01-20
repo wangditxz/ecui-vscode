@@ -1,0 +1,61 @@
+{
+    "name": "ecui-snippet",
+    "displayName": "ecui-snippet",
+    "description": "ecui-snippet",
+    "version": "0.0.1",
+    "publisher": "ecuiwd",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "activationEvents": [
+        "onLanguage:javascript"
+    ],
+    "main": "./src/extension",
+    "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "plugin ecui-snippet",
+            "properties": {
+                "ecui-snippet.default": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Set default browser"
+                }
+            }
+        },
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            }
+        ],
+        "commands": [
+            {
+                "command": "extension.openDoc",
+                "title": "查看ecui文档"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "html",
+                "scopeName": "text.html.etpl",
+                "path": "./syntaxes/html.etpl.language.json"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "when": "resourceLangId == javascript",
+                    "command": "extension.openDoc",
+                    "group": "ecui-snippet"
+                }
+            ]
+        }
+    },
+    "dependencies": {
+        "opn": "^5.3.0"
+    }
+}

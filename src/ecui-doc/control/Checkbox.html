@@ -1,0 +1,263 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Checkbox</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript" src="../common/common.js"></script>
+<script language="javascript" src="../common/browdata.js"></script>
+<script language="javascript" src="../common/appliesto2.js"></script>
+<script language="javascript" src="../common/toolbar.js"></script>
+<script language="javascript" src="../common/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/prettify.css" />
+<style>
+BODY
+{
+font-family:verdana,arial,helvetica;
+padding:20px;
+}
+</style>
+</head>
+<body>
+<h1><a>Checkbox 控件</a></h1>
+<hr size="1">
+<p>复选框控件。</p>
+<p>继承自 <a href="../control/InputControl.html">InputControl</a></p>
+<p><b>文件路径：</b>.../Users/yiche/yiche/ECUI/src/input/checkbox.js</p>
+
+
+<font color="red">构造方法中没有call()</font>
+
+<p class="clsRef">使用方法</p>
+<blockquote>
+	<p>&lt;input&nbsp;ui=&quot;type:checkbox;subject:china&quot;&nbsp;name=&quot;city&quot;&nbsp;value=&quot;beijing&quot;&nbsp;checked=&quot;checked&quot;&nbsp;type=&quot;checkbox&quot;&gt;</br>或</br>&lt;div&nbsp;ui=&quot;type:checkbox;name:city;value:beijing;checked:true;subject:china&quot;&gt;&lt;/div&gt;</br>或</br>&lt;div&nbsp;ui=&quot;type:checkbox;subject:china&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;name=&quot;city&quot;&nbsp;value=&quot;beijing&quot;&nbsp;checked=&quot;checked&quot;&nbsp;type=&quot;checkbox&quot;&gt;</br>&lt;/div&gt;</br></br></p>
+</blockquote>
+
+<p class="clsRef">详情</p>
+<blockquote>
+	<p>实现了对原生&nbsp;InputElement&nbsp;复选框的功能扩展，支持复选框之间的主从关系定义。当一个复选框的“从复选框”选中一部分时，“主复选框”将处于半选状态，这种状态逻辑意义上等同于未选择状态，但显示效果不同，复选框的主从关系可以有多级。复选框控件适用所有在一组中允许选择多个目标的交互，并不局限于此分组的表现形式(文本、图片等)。</br></p>
+</blockquote>
+
+<p class="clsRef">option支持的属性</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td>subject</td>
+    <td>主复选框 ID，会自动与主复选框建立关联后，作为主复选框的从属复选框之一</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>required</td>
+    <td>是否必须选择</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">属性</p>
+<blockquote>
+	<table class="clsSTD">
+	<tr>
+		<td>_bDefault</td>
+		<td>缺省的选中状态;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_nStatus</td>
+		<td>复选框当前的状态，0--全选，1--未选，2--半选;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_cSubject</td>
+		<td>主复选框;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_aDependents</td>
+		<td>全部的从属复选框;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bRequired</td>
+		<td>
+		</td>
+	</tr>
+		
+	</table>
+</blockquote>
+
+<p class="clsRef">方法</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td><a href="../method/Checkbox-$click.html">$click</a></td>
+    <td>控件点击时改变当前的选中状态。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Checkbox-$dispose.html">$dispose</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Checkbox-$keydown.html">$keydown</a></td>
+    <td>空格键按下时选中。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Checkbox-$keypress.html">$keypress</a></td>
+    <td>空格键按下时选中。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Checkbox-$keyup.html">$keyup</a></td>
+    <td>空格键按下时选中。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Checkbox-$reset.html">$reset</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Checkbox-$validate.html">$validate</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Checkbox-getDependents.html">getDependents</a></td>
+    <td>获取全部的从属复选框。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Checkbox-getSubject.html">getSubject</a></td>
+    <td>获取主复选框。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Checkbox-isChecked.html">isChecked</a></td>
+    <td>判断控件是否选中。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Checkbox-isFormChecked.html">isFormChecked</a></td>
+    <td>判断控件在提交时是否选中，默认返回&nbsp;isChecked&nbsp;的值。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Checkbox-init.html">init</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Checkbox-saveToDefault.html">saveToDefault</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Checkbox-setChecked.html">setChecked</a></td>
+    <td>设置复选框控件选中状态。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Checkbox-setSubject.html">setSubject</a></td>
+    <td>设置主复选框。</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">事件</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">子类</p>
+<blockquote>
+  <table class="clsSTD">
+  <tr>
+    <td><a href="../control/CheckboxTree-Checkbox.html">CheckboxTree.Checkbox</a></td>
+    <td>复选框部件。</td>
+  </tr>
+  
+  </table>
+</blockquote>
+
+<div style="text-align:right"><a href="../controlTree.html">返回</a></div>
+<script>
+if (document.getElementById('htmlDemo')) {
+    document.getElementById('htmlDemo').innerHTML = encodeHTML(formatHTML(document.getElementById('htmlDemo').innerHTML)).toLowerCase();
+    prettyPrint();
+}
+</script>
+</body>
+</html>

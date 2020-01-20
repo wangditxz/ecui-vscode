@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Radio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript" src="../common/common.js"></script>
+<script language="javascript" src="../common/browdata.js"></script>
+<script language="javascript" src="../common/appliesto2.js"></script>
+<script language="javascript" src="../common/toolbar.js"></script>
+<script language="javascript" src="../common/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/prettify.css" />
+<style>
+BODY
+{
+font-family:verdana,arial,helvetica;
+padding:20px;
+}
+</style>
+</head>
+<body>
+<h1><a>Radio 控件</a></h1>
+<hr size="1">
+<p>单选框控件。</p>
+<p>继承自 <a href="../control/InputControl.html">InputControl</a></p>
+<p><b>文件路径：</b>.../Users/yiche/yiche/ECUI/src/input/radio.js</p>
+
+
+<font color="red">构造方法中没有call()</font>
+
+<p class="clsRef">使用方法</p>
+<blockquote>
+	<p>&lt;input&nbsp;ui=&quot;type:radio&quot;&nbsp;name=&quot;city&quot;&nbsp;value=&quot;beijing&quot;&nbsp;checked=&quot;checked&quot;&nbsp;type=&quot;radio&quot;&gt;</br>或</br>&lt;div&nbsp;ui=&quot;type:radio;name:city;value:beijing;checked:true&quot;&gt;&lt;/div&gt;</br>或</br>&lt;div&nbsp;ui=&quot;type:radio&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;name=&quot;city&quot;&nbsp;value=&quot;beijing&quot;&nbsp;checked=&quot;checked&quot;&nbsp;type=&quot;radio&quot;&gt;</br>&lt;/div&gt;</br></br></p>
+</blockquote>
+
+<p class="clsRef">详情</p>
+<blockquote>
+	<p>实现了对原生&nbsp;InputElement&nbsp;单选框的功能扩展，支持对选中的图案的选择。单选框控件适用所有在一组中只允许选择一个目标的交互，并不局限于此分组的表现形式(文本、图片等)。</br></p>
+</blockquote>
+
+<p class="clsRef">option支持的属性</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td>required</td>
+    <td>是否必须选择</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">属性</p>
+<blockquote>
+	<table class="clsSTD">
+	<tr>
+		<td>_bDefault</td>
+		<td>默认的选中状态;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bRequired</td>
+		<td>
+		</td>
+	</tr>
+		
+	</table>
+</blockquote>
+
+<p class="clsRef">方法</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td><a href="../method/Radio-$click.html">$click</a></td>
+    <td>控件点击时将控件设置成为选中状态，同时取消同一个单选框控件组的其它控件的选中状态。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Radio-$keydown.html">$keydown</a></td>
+    <td>空格键按下时选中。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Radio-$keypress.html">$keypress</a></td>
+    <td>空格键按下时选中。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Radio-$keyup.html">$keyup</a></td>
+    <td>空格键按下时选中。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Radio-$ready.html">$ready</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Radio-$reset.html">$reset</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Radio-$validate.html">$validate</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Radio-getItems.html">getItems</a></td>
+    <td>获取与当前单选框同组的全部单选框。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Radio-isChecked.html">isChecked</a></td>
+    <td>判断控件是否选中。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Radio-isFormChecked.html">isFormChecked</a></td>
+    <td>判断控件在提交时是否选中，默认返回&nbsp;isChecked&nbsp;的值。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Radio-saveToDefault.html">saveToDefault</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Radio-setChecked.html">setChecked</a></td>
+    <td>设置单选框控件选中状态。</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">事件</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">子类</p>
+<blockquote>
+  <table class="clsSTD">
+  </table>
+</blockquote>
+
+<div style="text-align:right"><a href="../controlTree.html">返回</a></div>
+<script>
+if (document.getElementById('htmlDemo')) {
+    document.getElementById('htmlDemo').innerHTML = encodeHTML(formatHTML(document.getElementById('htmlDemo').innerHTML)).toLowerCase();
+    prettyPrint();
+}
+</script>
+</body>
+</html>

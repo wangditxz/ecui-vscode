@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Filter</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript" src="../common/common.js"></script>
+<script language="javascript" src="../common/browdata.js"></script>
+<script language="javascript" src="../common/appliesto2.js"></script>
+<script language="javascript" src="../common/toolbar.js"></script>
+<script language="javascript" src="../common/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/prettify.css" />
+<style>
+BODY
+{
+font-family:verdana,arial,helvetica;
+padding:20px;
+}
+</style>
+</head>
+<body>
+<h1><a>Filter 控件</a></h1>
+<hr size="1">
+<p>筛选框控件。</p>
+<p>继承自 <a href="../control/Combox.html">Combox</a></p>
+<p><b>文件路径：</b>.../Users/yiche/yiche/ECUI/src/input/filter.js</p>
+
+
+
+
+<p class="clsRef">使用方法</p>
+<blockquote>
+	<p>&lt;select&nbsp;ui=&quot;type:filter;placeholder:请输入&quot;&nbsp;name=&quot;age&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;value=&quot;20&quot;&gt;20&lt;/option&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;value=&quot;21&quot;&nbsp;selected&gt;21&lt;/option&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;value=&quot;22&quot;&gt;22&lt;/option&gt;</br>&lt;/select&gt;</br>或</br>&lt;div&nbsp;ui=&quot;type:filter;name:age;value:21&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ui=&quot;value:20&quot;&gt;20&lt;/div&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ui=&quot;value:21&quot;&gt;21&lt;/div&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ui=&quot;value:22&quot;&gt;22&lt;/div&gt;</br>&lt;/div&gt;</br>或</br>&lt;div&nbsp;ui=&quot;type:filter&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;name=&quot;age&quot;&nbsp;value=&quot;21&quot;&nbsp;placeholder=&quot;请输入&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ui=&quot;value:20&quot;&gt;20&lt;/div&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ui=&quot;value:21&quot;&gt;21&lt;/div&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ui=&quot;value:22&quot;&gt;22&lt;/div&gt;</br>&lt;/div&gt;</br></br></p>
+</blockquote>
+
+<p class="clsRef">详情</p>
+<blockquote>
+	<p>筛选框动态的响应用户的输入并提供选择，用户不输入时&nbsp;filter&nbsp;表现与普通的输入框相同。</br></p>
+</blockquote>
+
+<p class="clsRef">option支持的属性</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td>custom</td>
+    <td>是否允许用户自己输入内容，如果不允许，不选择的输入失焦会自动清除，默认为允许</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>url</td>
+    <td>动态的从服务器获取筛选内容的请求地址</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">属性</p>
+<blockquote>
+	<table class="clsSTD">
+	<tr>
+		<td>_bCustom</td>
+		<td>是否允许用户自己输入内容，如果不允许，不选择的输入失焦会自动清除;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_sUrl</td>
+		<td>服务器获取筛选内容的请求地址;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_sRequest</td>
+		<td>当前正在请求的值;
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_oHandler</td>
+		<td>
+		</td>
+	</tr>
+		
+	</table>
+</blockquote>
+
+<p class="clsRef">方法</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td><a href="../method/Filter-$blur.html">$blur</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Filter-$click.html">$click</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Filter-$focus.html">$focus</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/Filter-$input.html">$input</a></td>
+    <td></td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">事件</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  
+  
+  
+  
+  
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">子类</p>
+<blockquote>
+  <table class="clsSTD">
+  </table>
+</blockquote>
+
+<div style="text-align:right"><a href="../controlTree.html">返回</a></div>
+<script>
+if (document.getElementById('htmlDemo')) {
+    document.getElementById('htmlDemo').innerHTML = encodeHTML(formatHTML(document.getElementById('htmlDemo').innerHTML)).toLowerCase();
+    prettyPrint();
+}
+</script>
+</body>
+</html>

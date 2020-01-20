@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>MTab</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript" src="../common/common.js"></script>
+<script language="javascript" src="../common/browdata.js"></script>
+<script language="javascript" src="../common/appliesto2.js"></script>
+<script language="javascript" src="../common/toolbar.js"></script>
+<script language="javascript" src="../common/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/prettify.css" />
+<style>
+BODY
+{
+font-family:verdana,arial,helvetica;
+padding:20px;
+}
+</style>
+</head>
+<body>
+<h1><a>MTab 控件</a></h1>
+<hr size="1">
+<p>移动端选项卡控件。</p>
+<p>继承自 <a href="../control/Tab.html">Tab</a></p>
+<p><b>文件路径：</b>.../Users/yiche/yiche/ECUI/src/mobile/m-tab.js</p>
+
+
+
+
+<p class="clsRef">使用方法</p>
+<blockquote>
+	<p>&lt;div&nbsp;ui=&quot;type:m-tab;selected:1&quot;&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;包含容器的选项卡&nbsp;--&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;strong&gt;标题1&lt;/strong&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;这里是容器&nbsp;--&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;仅有标题的选项卡，以下selected定义与控件定义是一致的，可以忽略其中之一&nbsp;--&gt;</br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;strong&nbsp;ui=&quot;selected:true&quot;&gt;标题2&lt;/strong&gt;</br>&lt;/div&gt;</br></br></p>
+</blockquote>
+
+<p class="clsRef">详情</p>
+<blockquote>
+	<p>每一个选项卡都包含一个头部区域与容器区域，选项卡控件存在互斥性，只有唯一的一个选项卡能被选中并显示容器区域。</br></p>
+</blockquote>
+
+<p class="clsRef">option支持的属性</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td>bar</td>
+    <td>是否需要下划线，默认为false</td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">属性</p>
+<blockquote>
+	<table class="clsSTD">
+	<tr>
+		<td>_eBar</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_bIsTitle</td>
+		<td>
+		</td>
+	</tr>
+		
+	<tr>
+		<td>_cSelected</td>
+		<td>
+		</td>
+	</tr>
+		
+	</table>
+</blockquote>
+
+<p class="clsRef">方法</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  <tr>
+    <td><a href="../method/MTab-$activate.html">$activate</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MTab-$dispose.html">$dispose</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MTab-$dragend.html">$dragend</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MTab-$getXByContainer.html">$getXByContainer</a></td>
+    <td>获取内容区滑动的位置。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MTab-$getXByTitle.html">$getXByTitle</a></td>
+    <td>获取标题区滑动的位置。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MTab-$initStructure.html">$initStructure</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MTab-$setPositionByContainer.html">$setPositionByContainer</a></td>
+    <td>滑动内容区到指定的位置。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MTab-$setPositionByTitle.html">$setPositionByTitle</a></td>
+    <td>滑动标题区到指定的位置。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MTab-getPositionElement.html">getPositionElement</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MTab-getX.html">getX</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MTab-move.html">move</a></td>
+    <td>滑动到指定的tab页。</td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MTab-setPosition.html">setPosition</a></td>
+    <td></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><a href="../method/MTab-setSelected.html">setSelected</a></td>
+    <td></td>
+  </tr>
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">事件</p>
+<blockquote>
+  <table class="clsSTD">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </table>
+</blockquote>
+
+<p class="clsRef">子类</p>
+<blockquote>
+  <table class="clsSTD">
+  </table>
+</blockquote>
+
+<div style="text-align:right"><a href="../controlTree.html">返回</a></div>
+<script>
+if (document.getElementById('htmlDemo')) {
+    document.getElementById('htmlDemo').innerHTML = encodeHTML(formatHTML(document.getElementById('htmlDemo').innerHTML)).toLowerCase();
+    prettyPrint();
+}
+</script>
+</body>
+</html>
